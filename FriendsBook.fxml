@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500" maxWidth="600" minHeight="500" minWidth="600" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ListView fx:id="friendsList" layoutX="356.0" layoutY="57.0" prefHeight="200.0" prefWidth="200.0" onMouseClicked="#displayFriendDetails" />     
+      <VBox layoutX="190.0" layoutY="57.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+         <children>
+            <TextField fx:id="fnameTextField" alignment="CENTER" promptText="First Name" />
+            <TextField fx:id="lnameTextField" alignment="CENTER" promptText="Last Name" />
+            <TextField fx:id="ageField" alignment="CENTER" promptText="Age" />
+            <TextField fx:id="phoneNumTextField" promptText="Phone Number" />
+         </children>
+      </VBox>
+      <Button fx:id="loadButton" layoutX="494.0" layoutY="279.0" mnemonicParsing="false" onAction="#load" text="Load" />
+      <Button fx:id="clearButton" layoutX="50.0" layoutY="279.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
+      <Button fx:id="deleteButton" layoutX="250.0" layoutY="279.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+      <Button fx:id="saveButton" layoutX="378.0" layoutY="279.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Button fx:id="createButton" layoutX="130.0" layoutY="279.0" mnemonicParsing="false" onAction="#createFriend" text="Create Friend" />
+      <Button fx:id="quitButton" layoutX="516.0" layoutY="548.0" mnemonicParsing="false" onAction="#quit" text="Quit" />
+      <Label layoutX="91.0" layoutY="228.0" text="Phone Number:" />
+      <Label layoutX="151.0" layoutY="172.0" text="Age:" />
+      <Label layoutX="116.0" layoutY="115.0" text="Last Name:" />
+      <Label layoutX="115.0" layoutY="60.0" text="First Name:" />
+      <Label layoutX="288.0" layoutY="14.0" text="Friends">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="SavecategoryLabel" layoutX="216.0" layoutY="347.0" text="Choose a category to save friend to:" />
+      <HBox layoutX="45.0" layoutY="390.0" prefHeight="50.0" prefWidth="500.0" spacing="60.0">
+         <children>
+            <Button fx:id="saveCloseFriends" mnemonicParsing="false" onAction="#saveToCloseFriends" text="Close Friends" />
+            <Button fx:id="saveWorkFriends" mnemonicParsing="false" onAction="#saveToWorkFriends" text="Work Friends" />
+            <Button fx:id="saveSchoolFriends" mnemonicParsing="false" onAction="#saveToSchoolFriends" text="School Friends" />
+            <Button fx:id="saveFriends" mnemonicParsing="false" onAction="#saveToFriends" text="Mutual" />
+         </children>
+      </HBox>
+      <Label fx:id="LoadcategoryLabel" layoutX="216.0" layoutY="437.0" text="Choose a category to load friends from:" />
+      <HBox layoutX="45.0" layoutY="480.0" prefHeight="50.0" prefWidth="500.0" spacing="60.0">
+         <children>
+            <Button fx:id="loadCloseFriends" mnemonicParsing="false" onAction="#loadCloseFriends" text="Close Friends" />
+            <Button fx:id="loadWorkFriends" mnemonicParsing="false" onAction="#loadWorkFriends" text="Work Friends" />
+            <Button fx:id="loadSchoolFriends" mnemonicParsing="false" onAction="#loadSchoolFriends" text="School Friends" />
+            <Button fx:id="loadFriends" mnemonicParsing="false" onAction="#loadFriends" text="Mutual" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
