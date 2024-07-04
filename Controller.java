@@ -123,7 +123,7 @@ import javafx.collections.ObservableList;
              showAlert(Alert.AlertType.ERROR, "Invalid Name", "Last name field is blank.");
              return;
          }
-         if (lastName.isBlank() || !lastName.matches("[a-zA-Z]+")) {
+         if (!lastName.matches("[a-zA-Z]+")) {
              showAlert(Alert.AlertType.ERROR, "Invalid Name", "Name must contain only alphabetical characters.");
              return;
          }
